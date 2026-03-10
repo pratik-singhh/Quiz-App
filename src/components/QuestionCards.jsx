@@ -2,7 +2,9 @@ import Timer from "./Timer"
 function QuestionCards() {
 
   return (
-    <div></div>
+    <div>
+      <h1>Questions Time</h1>
+    </div>
   )
 }
 

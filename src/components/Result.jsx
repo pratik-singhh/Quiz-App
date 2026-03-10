@@ -1,6 +1,8 @@
 function Result() {
   return (
-    <div></div>
+    <div>
+      <h1>Result Time</h1>
+    </div>
   )
 }
 

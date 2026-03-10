@@ -5,9 +5,19 @@ import Result from './components/Result'
 import StartScreen from './components/StartScreen'
 
 function App() {
+
+  const [stage, setStage] = useState("start");
   return (
     <>
-      < StartScreen />
+      <div>
+
+
+        {stage === "start" && <StartScreen />}
+        {stage === "quiz" && <QuestionCards />}
+        {stage === "result" && <Result />}
+
+
+      </div>
     </>
   )
 }

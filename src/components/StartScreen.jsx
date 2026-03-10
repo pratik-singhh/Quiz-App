@@ -1,8 +1,8 @@
 function StartScreen() {
   return (
     <div>
-      <h1>
-        This is The Start.
+      <h1 id="StartQuiz">
+        Start Quiz.
       </h1>
     </div>
   )
