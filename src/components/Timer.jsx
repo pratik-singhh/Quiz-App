@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 function Timer({ onExpire, questionIndex }) {
-  const [time, setTime] = useState(5);
+  const [time, setTime] = useState(30);
 
   useEffect(() => {
-    setTime(5);
+    setTime(30);
 
   }, [questionIndex])
 

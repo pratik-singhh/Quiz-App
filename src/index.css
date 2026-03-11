@@ -1,0 +1,11 @@
+body {
+  background-image: url("./assets/wall 2.png");
+  background-size: cover;
+  background-color: black;
+  background-position: -50px -100px;
+  background-repeat: no-repeat;
+  color: orangered;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
