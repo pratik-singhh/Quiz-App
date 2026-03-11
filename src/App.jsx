@@ -15,15 +15,28 @@ function App() {
 
   const [currentquestion, setCurrentQuestion] = useState(0); //This is to determine which question no we are on .
 
+  function reset() {
+    setScore(0);
+    setStage("start");
+    setCurrentQuestion(0);
+  }
+
 
   function handleAnswer(attempt) {
 
-    if (attempt === Questions[currentquestion].correctIndex) {
+    console.log(currentquestion);
+    if (attempt === null) {
+
+      setScore((s) => s);
+
+    }
+    else if (attempt === Questions[currentquestion].correctIndex) {
       console.log("Correct");
       setScore((s) => s + 1);
     }
     else {
       console.log("Incorrect");
+      setScore((s) => s);
     }
     if (currentquestion < Questions.length - 1) {
 
@@ -43,8 +56,8 @@ function App() {
         {stage === "start" && <StartScreen startAction={setStage} />}
 
 
-        {stage === "quiz" && <QuestionCards attempt={handleAnswer} question={Questions[currentquestion]} />}
-        {stage === "result" && <Result score={score} total={Questions.length} />}
+        {stage === "quiz" && <QuestionCards currentquestion={currentquestion} attempt={handleAnswer} question={Questions[currentquestion]} />}
+        {stage === "result" && <Result score={score} total={Questions.length} restart={reset} />}
 
 
       </div>
