@@ -1,10 +1,21 @@
 import Timer from "./Timer"
-function QuestionCards() {
+function QuestionCards({ attempt, question }) {
 
   return (
-    <div>
-      <h1>Questions Time</h1>
-    </div>
+    <>
+
+      <div>
+        <h1>{question.questionText}</h1>
+      </div>
+
+      {
+        question.answerOptions.map((option, index) =>
+
+          (<button onClick={() => attempt(index)} key={index}>{option}</button>)
+
+        )
+      }
+    </>
   )
 }
 
