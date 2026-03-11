@@ -1,22 +1,28 @@
 const questions = [
   {
-    questionText: "What is the final evolution of Larvesta?",
-    answerOptions: ["Krookodile", "Togekiss", "Volcarona", "Altaria"],
-    correctIndex: 2,
-
-  },
-  {
-    questionText: "2x2",
-    answerOptions: ["1", "2", "3", "4"],
-    correctIndex: 3,
-
-  },
-
-  {
-    questionText: "5x12",
-    answerOptions: ["30", "60", "120", "112"],
+    questionText: "Which Pokémon is known as the 'Genetic Pokémon'?",
+    answerOptions: ["Ditto", "Mewtwo", "Porygon", "Arceus"],
     correctIndex: 1,
-
+  },
+  {
+    questionText: "What is the only dual-type Poison/Flying Pokémon?",
+    answerOptions: ["Gligar", "Crobat", "Noivern", "Skarmory"],
+    correctIndex: 1,
+  },
+  {
+    questionText: "In the games, which item must be held by Scyther to evolve into Scizor when traded?",
+    answerOptions: ["Metal Coat", "King's Rock", "Dragon Scale", "Upgrade"],
+    correctIndex: 0,
+  },
+  {
+    questionText: "Which of these types is completely immune to Ghost-type attacks?",
+    answerOptions: ["Psychic", "Dark", "Steel", "Normal"],
+    correctIndex: 3,
+  },
+  {
+    questionText: "What is the signature move of the legendary Pokémon Darkrai?",
+    answerOptions: ["Night Daze", "Dark Void", "Shadow Force", "Dream Eater"],
+    correctIndex: 1,
   },
 ]
 
