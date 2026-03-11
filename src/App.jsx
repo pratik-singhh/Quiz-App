@@ -50,7 +50,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className={`app ${stage}`}>
 
 
         {stage === "start" && <StartScreen startAction={setStage} />}

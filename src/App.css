@@ -2,12 +2,12 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
 
-  background-image: url("./assets/Bg.jpg");
+  background-image: url("./assets/result.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  color: red;
 
-  color: crimson;
   display: flex;
   justify-content: center;
   align-items: center;

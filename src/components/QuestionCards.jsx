@@ -16,7 +16,7 @@ function QuestionCards({ attempt, question, currentquestion }) {
 
   return (
     <>
-      <div className="quiz-box">
+      <div>
 
         <div>
           <h1>{question.questionText}</h1>
