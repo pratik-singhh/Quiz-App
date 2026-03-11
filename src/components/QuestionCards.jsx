@@ -16,57 +16,59 @@ function QuestionCards({ attempt, question, currentquestion }) {
 
   return (
     <>
+      <div className="quiz-box">
 
-      <div>
-        <h1>{question.questionText}</h1>
-      </div>
-      <div>
-        < Timer questionIndex={currentquestion} onExpire={onExpire} />
-      </div>
-      <div>
-
-
-        {
-          question.answerOptions.map((option, index) => {
+        <div>
+          <h1>{question.questionText}</h1>
+        </div>
+        <div>
+          < Timer questionIndex={currentquestion} onExpire={onExpire} />
+        </div>
+        <div>
 
 
-
-            let disabled = selectedAnswer !== null;
-            let isCorrect = index === question.correctIndex;
-            let isSelected = index === selectedAnswer;
-            let buttonClass = "";
-            if (selectedAnswer !== null) {
+          {
+            question.answerOptions.map((option, index) => {
 
 
-              if (isCorrect) {
-                buttonClass = "green";
+
+              let disabled = selectedAnswer !== null;
+              let isCorrect = index === question.correctIndex;
+              let isSelected = index === selectedAnswer;
+              let buttonClass = "";
+              if (selectedAnswer !== null) {
+
+
+                if (isCorrect) {
+                  buttonClass = "green";
+                }
+
+                else if (isSelected) {
+
+                  buttonClass = "red";
+                }
               }
 
-              else if (isSelected) {
 
-                buttonClass = "red";
+              return (<button className={buttonClass} disabled={disabled} onClick={() => {
+                setSelectedAnswer(index);
+                setTimeout(() => {
+
+                  setSelectedAnswer(null);
+                  attempt(index);
+                }
+                  , 1000)
               }
-            }
 
-
-            return (<button className={buttonClass} disabled={disabled} onClick={() => {
-              setSelectedAnswer(index);
-              setTimeout(() => {
-
-                setSelectedAnswer(null);
-                attempt(index);
               }
-                , 1000)
+                key={index}>{option}</button>)
             }
+            )
 
-            }
-              key={index}>{option}</button>)
+
+
           }
-          )
-
-
-
-        }
+        </div>
       </div>
     </>
   )
